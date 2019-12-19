@@ -3,21 +3,19 @@ kind: Deployment
 metadata:
   name: machineinfo-deploymentv2
   labels:
-    app: machineinfo-app
-    version: v2
+    app: machineinfo-app2
 spec:
-  replicas: 1
+  replicas: 2
   selector:
-  matchLabels:
-    app: machineinfo-app
+    matchLabels:
+      app: machineinfo-app2
   template:
     metadata:
       labels:
-        app: machineinfo-app
-        version: v2
+        app: machineinfo-app2
     spec:
       containers:
-        - name: machineinfo-containerv2
+        - name: machineinfo-container2
           image: nehashirsat/machineinfopink:v1.1.1
           ports:
             - containerPort: 9000
