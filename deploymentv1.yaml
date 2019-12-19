@@ -4,14 +4,14 @@ metadata:
   name: machineinfo-deploymentv1
   labels:
     app: machineinfo-app
-	version: v1
+    version: v1
 spec:
   replicas: 1
   template:
     metadata:
       labels:
         app: machineinfo-app
-		version: v1
+        version: v1
     spec:
       containers:
         - name: machineinfo-containerv1
@@ -27,7 +27,7 @@ metadata:
 spec:
   selector:
     app: machineinfo-app
-	version: v1
+    version: v1
   ports:
   - protocol: TCP
     port: 9000
